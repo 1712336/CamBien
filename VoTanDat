@@ -1,0 +1,996 @@
+[
+    {
+        "id": "44dc93e6.a2a78c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a4421833.3dc198",
+        "type": "subflow",
+        "name": "Chuyển server biên -> iNut Format",
+        "info": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "d3d5cd73.bd7f6"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 20,
+                "wires": [
+                    {
+                        "id": "e17f8857.2bcec8",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "531134fb.3634ec",
+        "type": "subflow",
+        "name": "Lấy dữ từ iNut",
+        "info": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "5940fb06.c11fc4"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 859.0000343322754,
+                "y": 98.00000190734863,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 968.0000343322754,
+                "y": 102.00000286102295,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 1048.9999732971191,
+                "y": 101.00000381469727,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 1059,
+                "y": 253,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 1102,
+                "y": 318,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 4
+                    }
+                ]
+            },
+            {
+                "x": 1116,
+                "y": 399,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 5
+                    }
+                ]
+            },
+            {
+                "x": 1108,
+                "y": 444,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 6
+                    }
+                ]
+            },
+            {
+                "x": 1006,
+                "y": 489,
+                "wires": [
+                    {
+                        "id": "1a863146.57b5ff",
+                        "port": 7
+                    }
+                ]
+            }
+        ],
+        "inputLabels": [
+            "Nhận đầu vào MQTT IN từ iNut cảm biến"
+        ],
+        "outputLabels": [
+            "Luồng cảm biến 1",
+            "Luồng cảm biến 2",
+            "Luồng cảm biến 3",
+            "Luồng cảm biến 4",
+            "Luồng cảm biến 5",
+            "Luồng cảm biến 6",
+            "Luồng cảm biến 7",
+            "Luồng cảm biến 8"
+        ]
+    },
+    {
+        "id": "df3373bf.c3df1",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "hivemq",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "70caf4c5.a3ec6c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ae4a144d.7f0058",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "3fd8d0d3.ca042",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "ae4a144d.7f0058",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "e42e2ac5.947c08",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "ae4a144d.7f0058",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "54d9d7d7.43a8b8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Cảng hàng không quốc tế vinh",
+        "tab": "ae4a144d.7f0058",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d3d5cd73.bd7f6",
+        "type": "json",
+        "z": "a4421833.3dc198",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 150,
+        "y": 20,
+        "wires": [
+            [
+                "3a3401f.884ddfe"
+            ]
+        ]
+    },
+    {
+        "id": "3a3401f.884ddfe",
+        "type": "change",
+        "z": "a4421833.3dc198",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.devices",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 20,
+        "wires": [
+            [
+                "e17f8857.2bcec8"
+            ]
+        ]
+    },
+    {
+        "id": "e17f8857.2bcec8",
+        "type": "json",
+        "z": "a4421833.3dc198",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5940fb06.c11fc4",
+        "type": "json",
+        "z": "531134fb.3634ec",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 165,
+        "y": 84,
+        "wires": [
+            [
+                "6e8faa5b.23f444"
+            ]
+        ]
+    },
+    {
+        "id": "1a863146.57b5ff",
+        "type": "switch",
+        "z": "531134fb.3634ec",
+        "name": "Phân luồn",
+        "property": "relayId",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 8,
+        "x": 825.9869575500488,
+        "y": 288.1562738418579,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6e8faa5b.23f444",
+        "type": "function",
+        "z": "531134fb.3634ec",
+        "name": "Lặp",
+        "func": "if (!msg.states) {\n    msg.states = msg.payload\n    msg.i = 0\n    return msg;\n} else {\n    msg.i++\n    if (msg.states[msg.i])\n        return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 327.89060974121094,
+        "y": 83.33600330352783,
+        "wires": [
+            [
+                "b355cb8f.057f48"
+            ]
+        ]
+    },
+    {
+        "id": "b355cb8f.057f48",
+        "type": "function",
+        "z": "531134fb.3634ec",
+        "name": "Lấy trạng thái thiết bị",
+        "func": "msg.relayId = msg.i\nmsg.payload = msg.states[msg.i].state\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 477.89060974121094,
+        "y": 183.33600330352783,
+        "wires": [
+            [
+                "6e8faa5b.23f444",
+                "1a863146.57b5ff"
+            ]
+        ]
+    },
+    {
+        "id": "e9dad868.17d418",
+        "type": "subflow:531134fb.3634ec",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "6c1cdd30.b5da94"
+            ],
+            [
+                "f119d248.45ce4",
+                "77be7a34.75cbe4"
+            ],
+            [
+                "5f424585.2ec63c",
+                "781f0e1b.89e7b"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "25e7eb2.a021d14",
+        "type": "subflow:a4421833.3dc198",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "e9dad868.17d418"
+            ]
+        ]
+    },
+    {
+        "id": "4d124d4d.e02a54",
+        "type": "mqtt in",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "topic": "/Hkevq5jr4/read",
+        "qos": "2",
+        "broker": "df3373bf.c3df1",
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "25e7eb2.a021d14"
+            ]
+        ]
+    },
+    {
+        "id": "6c1cdd30.b5da94",
+        "type": "ui_gauge",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "3fd8d0d3.ca042",
+        "order": 1,
+        "width": "2",
+        "height": "2",
+        "gtype": "compass",
+        "title": "Ánh sáng",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 780,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f119d248.45ce4",
+        "type": "ui_gauge",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "3fd8d0d3.ca042",
+        "order": 2,
+        "width": "2",
+        "height": "2",
+        "gtype": "compass",
+        "title": "Nhiệt độ ",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 780,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5f424585.2ec63c",
+        "type": "ui_gauge",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "3fd8d0d3.ca042",
+        "order": 3,
+        "width": "2",
+        "height": "2",
+        "gtype": "compass",
+        "title": "Độ ẩm ",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "781f0e1b.89e7b",
+        "type": "change",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Độ ẩm",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 240,
+        "wires": [
+            [
+                "336f08c1.55da88"
+            ]
+        ]
+    },
+    {
+        "id": "77be7a34.75cbe4",
+        "type": "change",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Nhiệt độ ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 200,
+        "wires": [
+            [
+                "336f08c1.55da88"
+            ]
+        ]
+    },
+    {
+        "id": "336f08c1.55da88",
+        "type": "ui_chart",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "3fd8d0d3.ca042",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#e88133",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "72bf7864.a77798",
+        "type": "subflow:531134fb.3634ec",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "f7e2bae6.98e338"
+            ],
+            [
+                "cb74187c.8923a8",
+                "b5558597.5ffdb8"
+            ],
+            [
+                "2dbb6e23.2dea12",
+                "53647d6c.038c34"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "861609a4.93c938",
+        "type": "subflow:a4421833.3dc198",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "x": 320,
+        "y": 460,
+        "wires": [
+            [
+                "72bf7864.a77798"
+            ]
+        ]
+    },
+    {
+        "id": "2bc93ed.28741c2",
+        "type": "mqtt in",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "topic": "/Hkevq5jr4/read",
+        "qos": "2",
+        "broker": "df3373bf.c3df1",
+        "x": 80,
+        "y": 460,
+        "wires": [
+            [
+                "861609a4.93c938"
+            ]
+        ]
+    },
+    {
+        "id": "f7e2bae6.98e338",
+        "type": "ui_gauge",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "e42e2ac5.947c08",
+        "order": 1,
+        "width": "2",
+        "height": "2",
+        "gtype": "compass",
+        "title": "Ánh sáng",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 780,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "cb74187c.8923a8",
+        "type": "ui_gauge",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "e42e2ac5.947c08",
+        "order": 2,
+        "width": "2",
+        "height": "2",
+        "gtype": "compass",
+        "title": "Nhiệt độ ",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 780,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2dbb6e23.2dea12",
+        "type": "ui_gauge",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "e42e2ac5.947c08",
+        "order": 3,
+        "width": "2",
+        "height": "2",
+        "gtype": "compass",
+        "title": "Độ ẩm ",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 770,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "53647d6c.038c34",
+        "type": "change",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Độ ẩm",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 460,
+        "wires": [
+            [
+                "9fbcd8f3.7ae998"
+            ]
+        ]
+    },
+    {
+        "id": "b5558597.5ffdb8",
+        "type": "change",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Nhiệt độ ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 420,
+        "wires": [
+            [
+                "9fbcd8f3.7ae998"
+            ]
+        ]
+    },
+    {
+        "id": "9fbcd8f3.7ae998",
+        "type": "ui_chart",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "group": "e42e2ac5.947c08",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#e88133",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1140,
+        "y": 440,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8158909f.9ef29",
+        "type": "change",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Logo",
+                "pt": "msg",
+                "to": "payload ",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 640,
+        "wires": [
+            [
+                "4e898f4f.9b08d"
+            ]
+        ]
+    },
+    {
+        "id": "2e1a2865.a26888",
+        "type": "inject",
+        "z": "44dc93e6.a2a78c",
+        "name": "",
+        "topic": "",
+        "payload": "data:image/jpeg;base64,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",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 230,
+        "y": 640,
+        "wires": [
+            [
+                "8158909f.9ef29"
+            ]
+        ]
+    },
+    {
+        "id": "4e898f4f.9b08d",
+        "type": "ui_template",
+        "z": "44dc93e6.a2a78c",
+        "group": "54d9d7d7.43a8b8",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n<img style=\"display: block; margin-left: auto; margin-right: auto; width: 150px; height: 150px;\" ng-src=\"{{msg.Logo}}\">",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 640,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    }
+]
